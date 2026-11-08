@@ -1,0 +1,9 @@
+# Draft dependency list; version compatibility has not yet been verified.
+torch
+torch-geometric
+numpy
+scikit-learn
+sentence-transformers
+transformers
+scipy
+sympy

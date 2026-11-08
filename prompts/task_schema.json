@@ -1,0 +1,6 @@
+{
+  "benign": "A legitimate online account or interaction with ordinary user behavior and content.",
+  "risk": "An online account or interaction exhibiting generic anomalous, deceptive, abusive, or fraudulent behavioral cues.",
+  "relation": "A graph interaction relation indicating how online accounts, reviews, or posts connect and propagate contextual information.",
+  "instruction": "Rewrite the following public task schema as one concise neutral semantic prototype. Do not add statistics, labels, experiment results, or dataset-specific facts. Schema: "
+}

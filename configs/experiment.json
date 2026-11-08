@@ -1,0 +1,19 @@
+{
+  "datasets": [
+    "reddit",
+    "instagram",
+    "amazonvideo"
+  ],
+  "embedding_dimension": 384,
+  "hidden_dimension": 64,
+  "dropout": 0.3,
+  "learning_rate": 0.005,
+  "weight_decay": 0.0005,
+  "early_stopping_patience": 60,
+  "epochs": {
+    "reddit": 300,
+    "instagram": 300,
+    "amazonvideo": 500
+  },
+  "checkpoint_selection": "validation_auc"
+}
