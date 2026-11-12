@@ -25,3 +25,13 @@ Run the TSP-GFD main model:
     python scripts/train_evaluate.py --dataset reddit --graph local/reddit.pt --prototypes local/prototypes.pt --test
 
 The adapted scripts have not been tested end-to-end. The experimental source scripts require path configuration, data preparation, and upstream baseline dependencies; some entries are retained as source references and are not yet a portable workflow. Check third-party licences before making this repository public.
+
+## Figures
+
+### TSP-GFD framework
+
+![TSP-GFD framework showing offline prototype preparation and the three-branch graph detector](figures/Figure_1_TSP-GFD_Workflow.png)
+
+### Learned node representations
+
+![t-SNE projections of validation-node representations on Reddit, Instagram, and AmazonVideo](figures/Figure_2_Representation_tSNE.png)
