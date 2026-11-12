@@ -2,6 +2,13 @@
 
 This repository draft contains code and configuration for the main experiment.
 
+## Method overview
+
+TSP-GFD detects fraudulent nodes in text-attributed graphs. It uses a frozen language model and text encoder to build and cache task-level class and relation prototypes offline. The detector combines three branches: a BWGNN backbone for graph structure, class-prototype matching for node-specific semantic features, and prototype-conditioned edge gating for neighbor aggregation. The three outputs are averaged for classification, with no online language model calls.
+
+![TSP-GFD framework showing offline prototype preparation and the three-branch graph detector](figures/Figure_1_TSP-GFD_Workflow.png)
+
+
 - models/: TSP-GFD prototype interface and BWGNN implementation.
 - scripts/: locally adapted prototype generation and training/evaluation scripts.
 - configs/: experimental hyperparameters.
@@ -25,13 +32,3 @@ Run the TSP-GFD main model:
     python scripts/train_evaluate.py --dataset reddit --graph local/reddit.pt --prototypes local/prototypes.pt --test
 
 The adapted scripts have not been tested end-to-end. The experimental source scripts require path configuration, data preparation, and upstream baseline dependencies; some entries are retained as source references and are not yet a portable workflow. Check third-party licences before making this repository public.
-
-## Figures
-
-### TSP-GFD framework
-
-![TSP-GFD framework showing offline prototype preparation and the three-branch graph detector](figures/Figure_1_TSP-GFD_Workflow.png)
-
-### Learned node representations
-
-![t-SNE projections of validation-node representations on Reddit, Instagram, and AmazonVideo](figures/Figure_2_Representation_tSNE.png)
